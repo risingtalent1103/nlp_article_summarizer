@@ -55,7 +55,6 @@ class App():
     
     def news_tap_summary_section_view(self, ticker):
         links, summaries = backend.get_5_summary_from_5_articles(ticker)
-
         st.write("Key links and summaries for the stock ticker you entered:")
         for i, (link, summary) in enumerate(zip(links, summaries)):
             num = i + 1

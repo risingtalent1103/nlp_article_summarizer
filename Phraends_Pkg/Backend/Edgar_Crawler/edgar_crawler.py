@@ -26,7 +26,7 @@ from typing import List
 from urllib3.util import Retry
 
 try:
-    from html.parser.HTMLParser import HTMLParseError
+    from html.parser import HTMLParserError
 except ImportError:  # Python 3.5+
 
     class HTMLParseError(Exception):

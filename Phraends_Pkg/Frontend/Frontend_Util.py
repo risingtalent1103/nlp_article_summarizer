@@ -21,6 +21,6 @@ def get_year_list():
 def get_three_year_range_from_today():
 
     end_date = datetime.datetime.now().date()
-    start_date = end_date - relativedelta(year=3)
+    start_date = end_date - relativedelta(years=3)
 
     return str(start_date), str(end_date)
