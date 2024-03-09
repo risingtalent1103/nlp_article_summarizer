@@ -131,7 +131,7 @@ class Crawler:
                 return False
 
             return True
-
+      
         url = f"https://www.cnbc.com/quotes/{ticker}?qsearchterm={ticker}"
         driver = self.get_chrome_driver()
         driver.get(url)
