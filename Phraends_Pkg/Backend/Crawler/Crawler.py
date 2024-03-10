@@ -26,7 +26,6 @@ class Crawler:
 
         options.add_experimental_option("excludeSwitches", ["enable-logging"])
         print("driver-start")
-        driver = webdriver.Chrome(ChromeDriverManager().install(), options=options)
         # driver = webdriver.Chrome(options=options)
         print("driver open")
         return driver
