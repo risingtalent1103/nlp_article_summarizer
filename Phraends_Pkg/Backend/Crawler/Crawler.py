@@ -4,7 +4,6 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.keys import Keys
 from Phraends_Pkg.Backend.Crawler import Scrape
-from webdriver_manager.chrome import ChromeDriverManager
 import time
 import random
 import yfinance as yf
@@ -26,7 +25,7 @@ class Crawler:
 
         options.add_experimental_option("excludeSwitches", ["enable-logging"])
         print("driver-start")
-        # driver = webdriver.Chrome(options=options)
+        driver = webdriver.Chrome(options=options)
         print("driver open")
         return driver
 
