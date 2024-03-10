@@ -5,7 +5,7 @@ altair==5.1.1
 appdirs==1.4.4
 async-timeout==4.0.3
 attrs==23.2.0
-beautifulsoup4==4.12.2
+beautifulsoup4==4.12.3
 blinker==1.6.2
 bs4==0.0.1
 cachetools==5.3.1
