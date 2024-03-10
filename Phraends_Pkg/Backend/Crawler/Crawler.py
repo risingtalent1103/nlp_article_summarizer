@@ -8,15 +8,15 @@ import time
 import random
 import yfinance as yf
 
-
+WEBDRIVER_PATH = "./Phraends_Pkg/Backend/Crawler/chromedriver.exe"
 
 class Crawler:
     
-    # def __init__(self):
-        # self.WEBDRIVER_PATH = "./Phraends_Pkg/Backend/Crawler/chromedriver.exe"
+    def __init__(self):
+        self.WEBDRIVER_PATH = "./Phraends_Pkg/Backend/Crawler/chromedriver.exe"
 
     def get_chrome_driver(self):
-        
+        service = Service(executable_path = WEBDRIVER_PATH)
         options = webdriver.ChromeOptions()
         
         options.add_argument('--headless')
@@ -25,7 +25,7 @@ class Crawler:
 
         options.add_experimental_option("excludeSwitches", ["enable-logging"])
         print("driver-start")
-        driver = webdriver.Chrome(options=options)
+        driver = webdriver.Chrome(service=service, options=options)
         print("driver open")
         return driver
 
