@@ -8,27 +8,27 @@ import time
 import random
 import yfinance as yf
 
-WEBDRIVER_PATH = "./Phraends_Pkg/Backend/Crawler/chromedriver.exe"
+# WEBDRIVER_PATH = "./Phraends_Pkg/Backend/Crawler/chromedriver.exe"
 
 class Crawler:
     
-    def __init__(self):
-        self.WEBDRIVER_PATH = "./Phraends_Pkg/Backend/Crawler/chromedriver.exe"
+    # def __init__(self):
+        # self.WEBDRIVER_PATH = "./Phraends_Pkg/Backend/Crawler/chromedriver.exe"
 
     def get_chrome_driver(self):
-        service = Service(executable_path = WEBDRIVER_PATH)
+        # service = Service(executable_path = WEBDRIVER_PATH)
         options = webdriver.ChromeOptions()
         
-        # options.add_argument('--headless')
-        # options.add_argument('--no-sandbox')        # This option may be required if you're running on a containerized environment
-        # options.add_argument('--disable-gpu')       # This option is necessary only if you're running on a version of Chrome < 58
+        options.add_argument('--headless')
+        options.add_argument('--no-sandbox')        # This option may be required if you're running on a containerized environment
+        options.add_argument('--disable-gpu')       # This option is necessary only if you're running on a version of Chrome < 58
         # options.add_argument('--disable-dev-shm-usage')  # Overcome limited resource problems
         # PROXY = "140.238.99.165:80"
         # options.add_argument('--proxy-server=%s' % PROXY)
 
         options.add_experimental_option("excludeSwitches", ["enable-logging"])
         print("driver-start")
-        driver = webdriver.Chrome(service=service, options=options)
+        driver = webdriver.Chrome(options=options)
         print("driver open")
         return driver
 
