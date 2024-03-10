@@ -20,7 +20,7 @@ class Crawler:
         options = webdriver.ChromeOptions()
         
         options.add_argument('--headless')
-        options.add_argument('--no-sandbox')        # This option may be required if you're running on a containerized environment
+        options.add_argument('--no-sandbox')        
         options.add_argument('--disable-gpu')       # This option is necessary only if you're running on a version of Chrome < 58
         # options.add_argument('--disable-dev-shm-usage')  # Overcome limited resource problems
         # PROXY = "140.238.99.165:80"
