@@ -10,7 +10,7 @@ blinker==1.6.2
 bs4==0.0.1
 cachetools==5.3.1
 certifi==2024.2.2
-charset-normalizer==3.2.0
+charset-normalizer==3.3.2
 click==8.1.7
 exceptiongroup==1.2.0
 frozendict==2.3.8
