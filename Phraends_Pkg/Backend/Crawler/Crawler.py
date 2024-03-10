@@ -8,24 +8,25 @@ import time
 import random
 import yfinance as yf
 
-WEBDRIVER_PATH = "./Phraends_Pkg/Backend/Crawler/chromedriver.exe"
+# WEBDRIVER_PATH = "./Phraends_Pkg/Backend/Crawler/chromedriver.exe"
 
 class Crawler:
     
-    def __init__(self):
-        self.WEBDRIVER_PATH = "./Phraends_Pkg/Backend/Crawler/chromedriver.exe"
+    # def __init__(self):
+    #     self.WEBDRIVER_PATH = "./Phraends_Pkg/Backend/Crawler/chromedriver.exe"
 
     def get_chrome_driver(self):
-        service = Service(executable_path = WEBDRIVER_PATH)
+        # service = Service(executable_path = WEBDRIVER_PATH)
         options = webdriver.ChromeOptions()
-        
+
         options.add_argument('--headless')
         options.add_argument('--no-sandbox')        
         options.add_argument('--disable-gpu') 
 
         options.add_experimental_option("excludeSwitches", ["enable-logging"])
-        print("driver-start")
-        driver = webdriver.Chrome(service=service, options=options)
+        remote_url = "https://jacksonchen_oBcpkO:syMkjcNxizzisB9VqUnf@hub-cloud.browserstack.com/wd/hub"
+        print("driver start")
+        driver = webdriver.Remote(command_executor=remote_url, options=options)
         print("driver open")
         return driver
 
